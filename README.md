@@ -7,5 +7,3 @@
 </p>
 
 ---
-
-![Interface example](Example.jpg)
