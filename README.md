@@ -8,4 +8,4 @@
 
 ---
 
-![Interface example](Example.png)
+![Interface example](Example.jpg)
