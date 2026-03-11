@@ -291,7 +291,7 @@ class Homework_Table(): # Class to work with tables in csv and txt files
                         users_dataframe = pd.DataFrame({
                             "date": [],
                             "algebra": [],
-                            "algebra_mse": [],
+                            "algebramse": [],
                             "biology": [],
                             "geografy": [],
                             "geometry": [],
