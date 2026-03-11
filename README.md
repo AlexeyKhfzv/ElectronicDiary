@@ -7,3 +7,5 @@
 </p>
 
 ---
+
+![Interface example](Example.png)
