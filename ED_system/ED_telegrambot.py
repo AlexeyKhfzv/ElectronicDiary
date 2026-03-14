@@ -374,7 +374,7 @@ async def message_handler(message: types.Message, state: FSMContext):
             for devid in get_developers_id(userstable.users_table, user_id):
                 if get_userconfig(devid, "notify_sup") != "0": dev_list.append(int(devid))
             try: devid = random.choice(dev_list)
-            except: devid = get_config("system", "developer_id")
+            except: devid = get_config("system", "khafizov_alexey_id")
             try: await bot.send_message(chat_id=devid, \
                     text = asking_support_message(user_id, username,  tgusername, message_text), \
                     parse_mode="HTML", reply_markup=support_request_keyboard)
@@ -797,7 +797,7 @@ async def callback_handler(callback: types.CallbackQuery, state: FSMContext):
         for devid in get_developers_id(userstable.users_table, user_id).union(get_main_admins_id(userstable.users_table, user_id)):
             if get_userconfig(devid, "notify_sup") != "0": cr_list.append(int(devid))
         try: creatorid = random.choice(cr_list)
-        except: creatorid = get_config("system", "developer_id")
+        except: creatorid = get_config("system", "khafizov_alexey_id")
         try:await bot.send_message(chat_id=creatorid, \
             text=support_notify_edit_category(user_id, username, callback_data.split('!')[1], tgusername), \
             parse_mode="HTML", reply_markup=request_keyboard)
