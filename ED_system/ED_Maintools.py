@@ -775,7 +775,7 @@ def get_full_statistics(users_table: Users_Table) -> str:
 def get_developers_id(users_df: pd.DataFrame, self_id: str | int, *, remove_self = True) -> set:
     developers_id_list = set(list(map(str, users_df[users_df["category"] == "Dev"].index)))
     if len(developers_id_list) == 0:
-        developers_id_list = set([get_config("system", "developer_id")]) #The Developer
+        developers_id_list = set([get_config("system", "khafizov_alexey_id")]) #The Developer
     if remove_self:
         try: developers_id_list.remove(str(self_id))
         except: pass
